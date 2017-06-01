@@ -30,7 +30,7 @@ namespace ConsoleApplication1
             string strMessage = Console.ReadLine();
             np.onMarryComing(strMessage);
 
-
+            //另一个事件
             Birthday br = new Birthday();
             br.Eventbirthday += f1.SendMessage;
             br.onBirthday("生日快乐");

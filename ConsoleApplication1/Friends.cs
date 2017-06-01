@@ -25,5 +25,9 @@ namespace ConsoleApplication1
             Console.WriteLine(message);
             Console.WriteLine(this.Name+":收到!over!");
         }
+        public void SendMessage(object sender,EventArgs e)
+        {
+            Console.WriteLine(this.Name + ":收到!over!");
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace ConsoleApplication1
     /// </summary>
     /// <param name="message"></param>
     public delegate void MarryDelegate(string message);
+  
     /// <summary>
     /// 新郎官类,用来发布事件
     /// </summary>
@@ -20,7 +21,7 @@ namespace ConsoleApplication1
         /// 定义一个事件(结婚)
         /// //使用自定义委托类型
         /// </summary>
-        public event BirthdayDelegate EventMarry;
+        public event EventHandler EventMarry;
 
         /// <summary>
         /// 发布事件
@@ -28,7 +29,8 @@ namespace ConsoleApplication1
         /// <param name="message"></param>
         public void onMarryComing(string message)
         {
-            EventMarry(message);
+            Console.WriteLine(message);
+            EventMarry(this,new EventArgs());
         }
     }
 }
